@@ -2,24 +2,59 @@ import Home from "../pages/Home";
 import Game from "../pages/Game";
 import MovieBg from "../components/MovieBg";
 import Footer from "../components/Footer";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function App() {
   const [activePage, setActivePage] = useState("home");
 
+  // 🎵 MUSIC STATE
+  const audioRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  useEffect(() => {
+    audioRef.current = new Audio("../src/assets/theme.webm");
+    audioRef.current.loop = true;
+    audioRef.current.volume = 0.5;
+
+    return () => {
+      audioRef.current.pause();
+    };
+  }, []);
+
+  function playMusic() {
+    audioRef.current?.play();
+    setIsPlaying(true);
+  }
+
+  function pauseMusic() {
+    audioRef.current?.pause();
+    setIsPlaying(false);
+  }
+
+  function toggleMusic() {
+    isPlaying ? pauseMusic() : playMusic();
+  }
+
   function handlePage() {
-    setActivePage((prev) => {
-      if (prev === "home") return "game";
-      else return "home";
-    });
+    setActivePage((prev) => (prev === "home" ? "game" : "home"));
   }
 
   return (
     <>
       <MovieBg />
-      <Home activePage={activePage} handlePage={handlePage} />
+
+      <Home
+        activePage={activePage}
+        handlePage={handlePage}
+        playMusic={playMusic} // 👈 pass down
+      />
+
       <Game activePage={activePage} handlePage={handlePage} />
-      <Footer />
+
+      <Footer
+        toggleMusic={toggleMusic} // 👈 pass down
+        isPlaying={isPlaying}
+      />
     </>
   );
 }

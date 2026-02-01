@@ -1,11 +1,7 @@
-import { useBackgroundMusic } from "./useBackgroundMusic";
-
-export default function Footer() {
-  const { toggle, isPlaying } = useBackgroundMusic("../src/assets/theme.webm");
-
+export default function Footer({ toggleMusic, isPlaying }) {
   return (
     <footer>
-      <button className="sound-toggle" onClick={toggle}>
+      <button className="sound-toggle" onClick={toggleMusic}>
         {isPlaying ? "🔊 Sound On" : "🔇 Sound Off"}
       </button>
     </footer>

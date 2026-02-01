@@ -1,11 +1,11 @@
 import ScoreBoard from "./ScoreBoard";
 import BatmanLogo from "./BatmanLogo";
 
-export default function Header() {
+export default function Header({ handlePage, score }) {
   return (
     <header>
-      <BatmanLogo />
-      <ScoreBoard />
+      <BatmanLogo handlePage={handlePage} />
+      <ScoreBoard score={score} />
     </header>
   );
 }

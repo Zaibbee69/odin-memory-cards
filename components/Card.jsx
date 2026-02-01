@@ -1,10 +1,10 @@
-export default function Card() {
+export default function Card({ img, name, cardId, handleCardClick }) {
   return (
-    <div class="card">
-      <div class="card-image">
-        <img src="https://via.placeholder.com/600x900" alt="Batman" />
+    <div className="card" onClick={() => handleCardClick(cardId)}>
+      <div className="card-image">
+        <img src={img} alt="Batman" />
       </div>
-      <div class="card-name">Batman</div>
+      <div className="card-name">{name}</div>
     </div>
   );
 }

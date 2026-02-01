@@ -1,11 +1,11 @@
-export default function Hero() {
+export default function Hero({ handlePage }) {
   return (
     <div className="hero-ctn">
       <h2>
         Arkham feeds on confusion and fear. Remember the symbols. Forget, and
         Gotham falls.
       </h2>
-      <button>Start Game</button>
+      <button onClick={handlePage}>Start Game</button>
     </div>
   );
 }

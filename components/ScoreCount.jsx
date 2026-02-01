@@ -1,8 +1,8 @@
-export default function ScoreCount() {
+export default function ScoreCount({ score }) {
   return (
     <section className="score-count-ctn">
       <div>
-        <p>0 / 5</p>
+        <p>{score} / 5</p>
       </div>
     </section>
   );

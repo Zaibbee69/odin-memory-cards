@@ -120,6 +120,7 @@ header {
 }
 
 .card {
+  @extend %box-shadow-extender;
   width: 220px;
   aspect-ratio: 3 / 4;
   background: $cards;
@@ -128,11 +129,13 @@ header {
   display: flex;
   flex-direction: column;
   border-radius: 4px;
+  cursor: pointer;
 }
 
+/* Image takes remaining space */
 .card-image {
-  flex: 1;
-  position: relative;
+  flex: 1 1 auto;
+  min-height: 0; // 🔑 critical fix
 }
 
 .card-image img {
@@ -142,12 +145,14 @@ header {
   display: block;
 }
 
+/* Name ALWAYS visible */
 .card-name {
+  flex: 0 0 auto;
   padding: 0.75rem;
   text-align: center;
   font-size: 0.95rem;
   color: #e6e6e6;
-  background: $primaryButtons;
+  background: $cards;
   font-family: $montserratFont;
   font-weight: 500;
 }

@@ -7,7 +7,6 @@ import { useEffect, useRef, useState } from "react";
 function App() {
   const [activePage, setActivePage] = useState("home");
 
-  // 🎵 MUSIC STATE
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -46,15 +45,12 @@ function App() {
       <Home
         activePage={activePage}
         handlePage={handlePage}
-        playMusic={playMusic} // 👈 pass down
+        playMusic={playMusic}
       />
 
       <Game activePage={activePage} handlePage={handlePage} />
 
-      <Footer
-        toggleMusic={toggleMusic} // 👈 pass down
-        isPlaying={isPlaying}
-      />
+      <Footer toggleMusic={toggleMusic} isPlaying={isPlaying} />
     </>
   );
 }

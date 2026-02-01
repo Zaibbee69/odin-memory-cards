@@ -36,7 +36,14 @@ export default function Game({ activePage, handlePage }) {
     return shuffled;
   }
 
+  const playSfx = (src) => {
+    const sfx = new Audio(src);
+    sfx.volume = 0.7;
+    sfx.play();
+  };
+
   function handleCardClick(id) {
+    playSfx("../src/assets/play.wav");
     if (clickedIds.has(id)) {
       setScore(0);
       setClickedIds(new Set());

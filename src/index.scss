@@ -397,3 +397,22 @@ header {
     transform: translateY(0);
   }
 }
+
+.sound-toggle {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: rgba(15, 15, 20, 0.85);
+  border: 1px solid rgba(120, 180, 255, 0.35);
+  color: #e6e6e6;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  font-family: $montserratFont;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(25, 25, 35, 0.95);
+    box-shadow: 0 0 12px rgba(120, 180, 255, 0.3);
+  }
+}

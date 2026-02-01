@@ -2,29 +2,58 @@ import { useEffect, useState } from "react";
 import Header from "../components/Header";
 import PlayArea from "../components/PlayArea";
 import ScoreCount from "../components/ScoreCount";
+import GameWonOverLay from "../components/GameWonOverLay";
+import GameLostOverLay from "../components/GameLostOverLay";
 
 export default function Game({ activePage, handlePage }) {
   const CORSHEADER = "https://corsproxy.io/?";
   const TOKEN = "3dbc92971f310dd0e69b672a3b59d117";
   const [imgUrls, setImgUrls] = useState([]);
   const [score, setScore] = useState(0);
+  const [highScore, setHighScore] = useState(0);
   const [clickedIds, setClickedIds] = useState(new Set([]));
+  const [gameLost, setGameLost] = useState(false);
+
+  const gameWon = score >= 5;
 
   function getRandomIds(ids, count = 5) {
     const shuffled = [...ids].sort(() => Math.random() - 0.5);
     return shuffled.slice(0, count);
   }
 
+  function resetGame() {
+    setScore(0);
+    setClickedIds(new Set());
+    setGameLost(false);
+  }
+
+  function shuffleArray(array) {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  }
+
   function handleCardClick(id) {
-    if (clickedIds.has(id)) return;
-    else {
+    if (clickedIds.has(id)) {
+      setScore(0);
+      setClickedIds(new Set());
+      setImgUrls((prev) => shuffleArray(prev));
+      setGameLost(true);
+      return;
+    } else {
       setClickedIds((prevIds) => new Set(prevIds).add(id));
       setScore((prevScore) => prevScore + 1);
+      setHighScore((prev) => Math.max(prev, score + 1));
+      setImgUrls((prevImgs) => shuffleArray(prevImgs));
     }
   }
 
   useEffect(() => {
     if (activePage !== "game") return;
+
     const batmanIds = [
       17, // Alfred Pennyworth
       58, // Azrael
@@ -72,9 +101,19 @@ export default function Game({ activePage, handlePage }) {
   if (activePage === "game") {
     return (
       <>
-        <Header handlePage={handlePage} score={score} />
+        <Header handlePage={handlePage} score={score} highScore={highScore} />
         <PlayArea imgUrls={imgUrls} handleCardClick={handleCardClick} />
         <ScoreCount score={score} />
+        <GameWonOverLay
+          handlePage={handlePage}
+          gameWon={gameWon}
+          resetGame={resetGame}
+        />
+        <GameLostOverLay
+          handlePage={handlePage}
+          gameLost={gameLost}
+          resetGame={resetGame}
+        />
       </>
     );
   } else {

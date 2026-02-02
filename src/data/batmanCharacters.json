@@ -1,0 +1,142 @@
+[
+  {
+    "id": "17",
+    "name": "Alfred Pennyworth",
+    "image": "/odin-memory-cards/images/batman/17.jpg"
+  },
+  {
+    "id": "58",
+    "name": "Azrael",
+    "image": "/odin-memory-cards/images/batman/58.jpg"
+  },
+  {
+    "id": "63",
+    "name": "Batgirl",
+    "image": "/odin-memory-cards/images/batman/63.jpg"
+  },
+  {
+    "id": "69",
+    "name": "Batman",
+    "image": "/odin-memory-cards/images/batman/69.jpg"
+  },
+  {
+    "id": "73",
+    "name": "Batwoman V",
+    "image": "/odin-memory-cards/images/batman/73.jpg"
+  },
+  {
+    "id": "334",
+    "name": "Huntress",
+    "image": "/odin-memory-cards/images/batman/334.jpg"
+  },
+  {
+    "id": "491",
+    "name": "Nightwing",
+    "image": "/odin-memory-cards/images/batman/491.jpg"
+  },
+  {
+    "id": "505",
+    "name": "Oracle",
+    "image": "/odin-memory-cards/images/batman/505.jpg"
+  },
+  {
+    "id": "546",
+    "name": "Red Hood",
+    "image": "/odin-memory-cards/images/batman/546.jpg"
+  },
+  {
+    "id": "549",
+    "name": "Red Robin",
+    "image": "/odin-memory-cards/images/batman/549.jpg"
+  },
+  {
+    "id": "561",
+    "name": "Robin",
+    "image": "/odin-memory-cards/images/batman/561.jpg"
+  },
+  {
+    "id": "60",
+    "name": "Bane",
+    "image": "/odin-memory-cards/images/batman/60.jpg"
+  },
+  {
+    "id": "165",
+    "name": "Catwoman",
+    "image": "/odin-memory-cards/images/batman/165.jpg"
+  },
+  {
+    "id": "181",
+    "name": "Clock King",
+    "image": "/odin-memory-cards/images/batman/181.jpg"
+  },
+  {
+    "id": "214",
+    "name": "Deadshot",
+    "image": "/odin-memory-cards/images/batman/214.jpg"
+  },
+  {
+    "id": "216",
+    "name": "Deathstroke",
+    "image": "/odin-memory-cards/images/batman/216.jpg"
+  },
+  {
+    "id": "370",
+    "name": "Joker",
+    "image": "/odin-memory-cards/images/batman/370.jpg"
+  },
+  {
+    "id": "386",
+    "name": "Killer Croc",
+    "image": "/odin-memory-cards/images/batman/386.jpg"
+  },
+  {
+    "id": "427",
+    "name": "Man-Bat",
+    "image": "/odin-memory-cards/images/batman/427.jpg"
+  },
+  {
+    "id": "457",
+    "name": "Mister Freeze",
+    "image": "/odin-memory-cards/images/batman/457.jpg"
+  },
+  {
+    "id": "461",
+    "name": "Mister Zsasz",
+    "image": "/odin-memory-cards/images/batman/461.jpg"
+  },
+  {
+    "id": "514",
+    "name": "Penguin",
+    "image": "/odin-memory-cards/images/batman/514.jpg"
+  },
+  {
+    "id": "522",
+    "name": "Poison Ivy",
+    "image": "/odin-memory-cards/images/batman/522.jpg"
+  },
+  {
+    "id": "538",
+    "name": "Ra's Al Ghul",
+    "image": "/odin-memory-cards/images/batman/538.jpg"
+  },
+  {
+    "id": "558",
+    "name": "Riddler",
+    "image": "/odin-memory-cards/images/batman/558.jpg"
+  },
+  {
+    "id": "576",
+    "name": "Scarecrow",
+    "image": "/odin-memory-cards/images/batman/576.jpg"
+  },
+  {
+    "id": "609",
+    "name": "Solomon Grundy",
+    "image": "/odin-memory-cards/images/batman/609.jpg"
+  },
+  {
+    "id": "678",
+    "name": "Two-Face",
+    "image": "/odin-memory-cards/images/batman/678.jpg"
+  }
+]

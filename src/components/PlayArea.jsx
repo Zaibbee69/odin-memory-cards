@@ -5,7 +5,7 @@ export default function PlayArea({ imgUrls, handleCardClick }) {
     return (
       <Card
         key={img.id}
-        img={img.image.url}
+        img={img.image}
         name={img.name}
         cardId={img.id}
         handleCardClick={handleCardClick}

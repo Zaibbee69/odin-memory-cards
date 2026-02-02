@@ -1,7 +1,7 @@
-import Home from "../pages/Home";
-import Game from "../pages/Game";
-import MovieBg from "../components/MovieBg";
-import Footer from "../components/Footer";
+import Home from "./pages/Home";
+import Game from "./pages/Game";
+import MovieBg from "./components/MovieBg";
+import Footer from "./components/Footer";
 import { useEffect, useRef, useState } from "react";
 
 function App() {

@@ -43,7 +43,7 @@ export default function Game({ activePage, handlePage }) {
   };
 
   function handleCardClick(id) {
-    playSfx("../src/assets/play.wav");
+    playSfx("play.wav");
     if (clickedIds.has(id)) {
       setScore(0);
       setClickedIds(new Set());

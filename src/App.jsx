@@ -11,7 +11,7 @@ function App() {
   const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
-    audioRef.current = new Audio("../src/assets/theme.webm");
+    audioRef.current = new Audio("theme.webm");
     audioRef.current.loop = true;
     audioRef.current.volume = 0.5;
 
